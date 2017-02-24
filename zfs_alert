@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'slack/incoming/webhooks'
+
+result = `zpool status -x`.chomp
+if result != "all pools are healthy"
+  slack = Slack::Incoming::Webhooks.new "YOUR WEBHOOK URL"
+  slack.post result
+end
