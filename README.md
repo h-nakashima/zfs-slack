@@ -1,8 +1,19 @@
-# zfs-slack
+ZFS-Slack
+====
 
-## このリポジトリについて
-ZFSのプールの状態をSlackに流すやつを置くところ。  
-その他のやーつーも入れてZFSツール全般で使うなら名前とか変えたいね。
+ZFSのステータスがエラーになったらSlackに投げるスクリプトです。
 
-## 使い方
-cronに入れる
+## Description
+cronで定期的にzpoolのステータスを確認し、異常があった場合はSlackに投げる、ただそれだけのスクリプト。
+
+## Requirement
+- Ruby
+- Slack WEBHOOK URL
+
+## Licence
+
+[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+
+## Author
+
+[h-nakashima](https://github.com/h-nakashima)
